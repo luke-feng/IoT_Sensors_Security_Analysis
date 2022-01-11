@@ -69,3 +69,15 @@ The following shows the outline structure of the this system.
    * `ml-based.py` is used to train and test the ML-based models.
    * `dl-based.py` is used to train and test the DL-based models.
 ## Federated Learning Based Approaches
+   * Project dependencies (such as `scikit-learn` and `flwr`) are defined in `pyproject.toml`. You can install them via:
+   
+    poetry install
+    poetry shell
+    
+Afterwards you are ready to start the Flower server as well as the clients. You can simply start the server in a terminal as follows:
+
+    poetry run python3 server.py
+
+Now you are ready to start the Flower clients which will participate in the learning. To do so simply open two more terminals and run the following command in each:
+
+    poetry run python3 client.py
